@@ -110,13 +110,12 @@ func TestBuildRequestIngoreCanonicalHeaderKey(t *testing.T) {
 	defer ResetTestConfig()
 	c.IgnoreCanonicalMIMEHeaderKey = true
 	config.SetGlobal(c)
-	headerKey := "X-CertificateOuid"
 	eventHandlerConf := config.WebHookHandlerConf{
 		TargetPath:   TestHttpGet,
 		Method:       "GET",
 		EventTimeout: 10,
 		TemplatePath: "../templates/default_webhook.json",
-		HeaderList:   map[string]string{headerKey: headerKey},
+		HeaderList:   map[string]string{NonCanonicalHeaderKey: NonCanonicalHeaderKey},
 	}
 
 	ev := &WebHookHandler{}
@@ -127,9 +126,9 @@ func TestBuildRequestIngoreCanonicalHeaderKey(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	got := req.Header[headerKey][0]
-	if got != headerKey {
-		t.Errorf("expected %q got %q", headerKey, got)
+	got := req.Header[NonCanonicalHeaderKey][0]
+	if got != NonCanonicalHeaderKey {
+		t.Errorf("expected %q got %q", NonCanonicalHeaderKey, got)
 	}
 }
 
