@@ -105,6 +105,34 @@ func TestBuildRequest(t *testing.T) {
 	}
 }
 
+func TestBuildRequestIngoreCanonicalHeaderKey(t *testing.T) {
+	c := config.Global()
+	defer ResetTestConfig()
+	c.IgnoreCanonicalMIMEHeaderKey = true
+	config.SetGlobal(c)
+	headerKey := "X-CertificateOuid"
+	eventHandlerConf := config.WebHookHandlerConf{
+		TargetPath:   TestHttpGet,
+		Method:       "GET",
+		EventTimeout: 10,
+		TemplatePath: "../templates/default_webhook.json",
+		HeaderList:   map[string]string{headerKey: headerKey},
+	}
+
+	ev := &WebHookHandler{}
+	if err := ev.Init(eventHandlerConf); err != nil {
+		t.Fatal(err)
+	}
+	req, err := ev.BuildRequest("")
+	if err != nil {
+		t.Fatal(err)
+	}
+	got := req.Header[headerKey][0]
+	if got != headerKey {
+		t.Errorf("expected %q got %q", headerKey, got)
+	}
+}
+
 func TestCreateBody(t *testing.T) {
 	em := config.EventMessage{
 		Type:      EventQuotaExceeded,
