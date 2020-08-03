@@ -201,9 +201,8 @@ func TestBatchIgnoreCanonicalHeaderKey(t *testing.T) {
 	var header atomic.Value
 	header.Store("")
 	requestHandler := func(ctx *fasthttp.RequestCtx) {
-		h := ctx.Request.Header
-		h.DisableNormalizing()
-		header.Store(string(h.Peek(NonCanonicalHeaderKey)))
+		ctx.Request.Header.DisableNormalizing()
+		header.Store(string(ctx.Request.Header.Peek(NonCanonicalHeaderKey)))
 	}
 	srv := &fasthttp.Server{
 		Handler:                       requestHandler,
