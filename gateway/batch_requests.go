@@ -39,14 +39,6 @@ type BatchRequestHandler struct {
 	API *APISpec
 }
 
-type round struct {
-	http.RoundTripper
-}
-
-func (r round) RoundTrip(req *http.Request) (*http.Response, error) {
-	return r.RoundTripper.RoundTrip(req)
-}
-
 // doRequest will make the same request but return a BatchReplyUnit
 func (b *BatchRequestHandler) doRequest(req *http.Request, relURL string) BatchReplyUnit {
 	tr := &http.Transport{TLSClientConfig: &tls.Config{}}
@@ -60,7 +52,7 @@ func (b *BatchRequestHandler) doRequest(req *http.Request, relURL string) BatchR
 
 	tr.Proxy = proxyFromAPI(b.API)
 
-	client := &http.Client{Transport: round{tr}}
+	client := &http.Client{Transport: tr}
 
 	resp, err := client.Do(req)
 	if err != nil {
