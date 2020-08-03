@@ -198,7 +198,6 @@ func TestBatchIgnoreCanonicalHeaderKey(t *testing.T) {
 		}
 	}
 	defer l.Close()
-	httptest.NewServer()
 	var header atomic.Value
 	header.Store("")
 	requestHandler := func(ctx *fasthttp.RequestCtx) {
