@@ -193,9 +193,12 @@ func TestVirtualEndpointBatch(t *testing.T) {
 func TestBatchIgnoreCanonicalHeaderKey(t *testing.T) {
 	l, err := net.Listen("tcp", "127.0.0.1:0")
 	if err != nil {
-		t.Fatal(err)
+		if l, err = net.Listen("tcp", "127.0.0.1:0"); err != nil {
+			t.Fatal(err)
+		}
 	}
 	defer l.Close()
+	httptest.NewServer()
 	var header atomic.Value
 	header.Store("")
 	requestHandler := func(ctx *fasthttp.RequestCtx) {
