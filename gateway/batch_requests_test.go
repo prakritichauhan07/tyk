@@ -190,7 +190,7 @@ func TestVirtualEndpointBatch(t *testing.T) {
 
 }
 
-func TestBatchIgnoreCase(t *testing.T) {
+func TestBatchIgnoreCanonicalHeaderKey(t *testing.T) {
 	l, err := net.Listen("tcp", "127.0.0.1:0")
 	if err != nil {
 		t.Fatal(err)
