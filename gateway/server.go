@@ -139,9 +139,9 @@ func setTestMode(v bool) {
 }
 
 func getPolicy(polID string) user.Policy {
-	apisMu.RLock()
+	policiesMu.RLock()
 	pol := policiesByID[polID]
-	apisMu.RUnlock()
+	policiesMu.RUnlock()
 	return pol
 }
 
