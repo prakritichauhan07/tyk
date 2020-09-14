@@ -4,12 +4,12 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/TykTechnologies/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/apidef"
 	cache "github.com/pmylund/go-cache"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/TykTechnologies/tyk/config"
-	"github.com/TykTechnologies/tyk/user"
+	"github.com/prakritichauhan07/tyk/config"
+	"github.com/prakritichauhan07/tyk/user"
 )
 
 type mockStore struct {
