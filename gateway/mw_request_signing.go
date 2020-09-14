@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TykTechnologies/tyk/certs"
+	"github.com/prakritichauhan07/tyk/certs"
 )
 
 type RequestSigning struct {
