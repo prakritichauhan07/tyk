@@ -7,9 +7,9 @@ import (
 	"github.com/jensneuse/graphql-go-tools/pkg/graphql"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/TykTechnologies/tyk/headers"
-	"github.com/TykTechnologies/tyk/test"
-	"github.com/TykTechnologies/tyk/user"
+	"github.com/prakritichauhan07/tyk/headers"
+	"github.com/prakritichauhan07/tyk/test"
+	"github.com/prakritichauhan07/tyk/user"
 )
 
 func TestRateLimit_Unlimited(t *testing.T) {
