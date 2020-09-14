@@ -15,15 +15,15 @@ fatal() {
 
 FMT_FILES=$(gofmt -l . | grep -v vendor)
 if [[ -n ${FMT_FILES} ]]; then
-    fatal "Run 'gofmt -w' on these files:\n$FMT_FILES"
+    #fatal "Run 'gofmt -w' on these files:\n$FMT_FILES"
+    gofmt -w ${FMT_FILES}
 fi
 
 echo "gofmt check is ok!"
 
 IMP_FILES="$(goimports -l . | grep -v vendor)"
 if [[ -n ${IMP_FILES} ]]; then
-    #fatal "Run 'goimports -w' on these files:\n$IMP_FILES"
-    gofmt -w ${FMT_FILES}
+    fatal "Run 'goimports -w' on these files:\n$IMP_FILES"
 fi
 
 echo "goimports check is ok!"
