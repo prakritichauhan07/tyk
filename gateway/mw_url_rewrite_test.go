@@ -4,13 +4,13 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/TykTechnologies/tyk/test"
+	"github.com/prakritichauhan07/tyk/test"
 
 	"bytes"
 	"net/http"
 
-	"github.com/TykTechnologies/tyk/apidef"
-	"github.com/TykTechnologies/tyk/user"
+	"github.com/prakritichauhan07/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/user"
 )
 
 var testRewriterData = []struct {
