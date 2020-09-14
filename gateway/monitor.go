@@ -3,8 +3,8 @@ package gateway
 import (
 	"time"
 
-	"github.com/TykTechnologies/tyk/config"
-	"github.com/TykTechnologies/tyk/user"
+	"github.com/prakritichauhan07/tyk/config"
+	"github.com/prakritichauhan07/tyk/user"
 )
 
 type Monitor struct{}
