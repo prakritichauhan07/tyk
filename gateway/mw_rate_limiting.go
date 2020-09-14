@@ -7,7 +7,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/TykTechnologies/tyk/request"
+	"github.com/prakritichauhan07/tyk/request"
 )
 
 var sessionLimiter = SessionLimiter{}
