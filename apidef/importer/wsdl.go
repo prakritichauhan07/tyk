@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/TykTechnologies/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/apidef"
 	uuid "github.com/satori/go.uuid"
 )
 
