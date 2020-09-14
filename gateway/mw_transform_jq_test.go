@@ -5,8 +5,8 @@ package gateway
 import (
 	"testing"
 
-	"github.com/TykTechnologies/tyk/apidef"
-	"github.com/TykTechnologies/tyk/test"
+	"github.com/prakritichauhan07/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/test"
 )
 
 func testPrepareJQMiddleware() {
