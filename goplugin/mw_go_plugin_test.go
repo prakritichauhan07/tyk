@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/TykTechnologies/tyk/apidef"
-	"github.com/TykTechnologies/tyk/gateway"
-	"github.com/TykTechnologies/tyk/test"
+	"github.com/prakritichauhan07/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/gateway"
+	"github.com/prakritichauhan07/tyk/test"
 )
 
 func TestMain(m *testing.M) {
