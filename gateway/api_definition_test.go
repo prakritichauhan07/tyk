@@ -16,10 +16,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/TykTechnologies/tyk/apidef"
-	"github.com/TykTechnologies/tyk/config"
-	"github.com/TykTechnologies/tyk/test"
-	"github.com/TykTechnologies/tyk/user"
+	"github.com/prakritichauhan07/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/config"
+	"github.com/prakritichauhan07/tyk/test"
+	"github.com/prakritichauhan07/tyk/user"
 	"github.com/go-redis/redis"
 )
 
