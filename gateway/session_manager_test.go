@@ -3,7 +3,7 @@ package gateway
 import (
 	"testing"
 
-	"github.com/TykTechnologies/tyk/user"
+	"github.com/prakritichauhan07/tyk/user"
 	"github.com/stretchr/testify/assert"
 )
 
