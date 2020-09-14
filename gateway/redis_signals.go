@@ -14,8 +14,8 @@ import (
 	"github.com/go-redis/redis"
 
 	"github.com/TykTechnologies/goverify"
-	"github.com/TykTechnologies/tyk/config"
-	"github.com/TykTechnologies/tyk/storage"
+	"github.com/prakritichauhan07/tyk/config"
+	"github.com/prakritichauhan07/tyk/storage"
 )
 
 type NotificationCommand string
