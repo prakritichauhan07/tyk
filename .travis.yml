@@ -44,7 +44,7 @@ install:
 
 
 before_script:
-   - 'if [[ ! -f $CONSUL_DIR/consul ]]; then (mkdir -p "$CONSUL_DIR" && cd $CONSUL_DIR && wget https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_arm64.zip && unzip consul_${CONSUL_VERSION}_linux_${TRAVIS_CPU_ARCH}.zip); fi'
+   - 'if [[ ! -f $CONSUL_DIR/consul ]]; then (mkdir -p "$CONSUL_DIR" && cd $CONSUL_DIR && wget https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_linux_${TRAVIS_CPU_ARCH}.zip && unzip consul_${CONSUL_VERSION}_linux_${TRAVIS_CPU_ARCH}.zip); fi'
    - $CONSUL_DIR/consul --version
    - $CONSUL_DIR/consul agent --dev &
    # Wait for consul's raft election
