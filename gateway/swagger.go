@@ -1,8 +1,8 @@
 package gateway
 
 import (
-	"github.com/TykTechnologies/tyk/apidef"
-	"github.com/TykTechnologies/tyk/user"
+	"github.com/prakritichauhan07/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/user"
 )
 
 // parameterBodies
