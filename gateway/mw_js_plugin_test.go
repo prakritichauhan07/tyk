@@ -14,16 +14,16 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/TykTechnologies/tyk/ctx"
-	"github.com/TykTechnologies/tyk/user"
+	"github.com/prakritichauhan07/tyk/ctx"
+	"github.com/prakritichauhan07/tyk/user"
 
 	"github.com/sirupsen/logrus"
 	prefixed "github.com/x-cray/logrus-prefixed-formatter"
 
-	"github.com/TykTechnologies/tyk/apidef"
-	"github.com/TykTechnologies/tyk/config"
-	logger "github.com/TykTechnologies/tyk/log"
-	"github.com/TykTechnologies/tyk/test"
+	"github.com/prakritichauhan07/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/config"
+	logger "github.com/prakritichauhan07/tyk/log"
+	"github.com/prakritichauhan07/tyk/test"
 )
 
 func TestJSVMLogs(t *testing.T) {
