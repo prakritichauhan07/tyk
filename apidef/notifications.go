@@ -3,7 +3,7 @@ package apidef
 import (
 	"time"
 
-	logger "github.com/TykTechnologies/tyk/log"
+	logger "github.com/prakritichauhan07/tyk/log"
 
 	"github.com/franela/goreq"
 )
