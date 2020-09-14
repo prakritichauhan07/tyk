@@ -6,7 +6,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/TykTechnologies/tyk/config"
+	"github.com/prakritichauhan07/tyk/config"
 )
 
 func TestGetLogEntryForRequest(t *testing.T) {
