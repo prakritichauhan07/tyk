@@ -22,14 +22,15 @@ echo "gofmt check is ok!"
 
 IMP_FILES="$(goimports -l . | grep -v vendor)"
 if [[ -n ${IMP_FILES} ]]; then
-    fatal "Run 'goimports -w' on these files:\n$IMP_FILES"
+    #fatal "Run 'goimports -w' on these files:\n$IMP_FILES"
+    gofmt -w ${FMT_FILES}
 fi
 
 echo "goimports check is ok!"
 
 PKGS="$(go list ./...)"
 
-export PKG_PATH=${GOPATH}/src/github.com/TykTechnologies/tyk
+export PKG_PATH=${GOPATH}/src/github.com/prakritichauhan07/tyk
 
 # build Go-plugin used in tests
 go build -o ./test/goplugins/goplugins.so -buildmode=plugin ./test/goplugins || fatal "building Go-plugin failed"
@@ -60,4 +61,4 @@ done
 # TODO: fix rpc tests and enable this
 #rpc_tests='SyncAPISpecsRPC|OrgSessionWithRPCDown'
 rpc_tests='OrgSessionWithRPCDown'
-show go test -v -timeout ${TEST_TIMEOUT} -coverprofile=test.cov github.com/TykTechnologies/tyk/gateway -p 1 -run '"'${rpc_tests}'"' || fatal "Test Failed"
+show go test -v -timeout ${TEST_TIMEOUT} -coverprofile=test.cov github.com/prakritichauhan07/tyk/gateway -p 1 -run '"'${rpc_tests}'"' || fatal "Test Failed"
