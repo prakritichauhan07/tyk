@@ -9,11 +9,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/TykTechnologies/tyk/rpc"
+	"github.com/prakritichauhan07/tyk/rpc"
 
-	"github.com/TykTechnologies/tyk/config"
-	"github.com/TykTechnologies/tyk/headers"
-	"github.com/TykTechnologies/tyk/storage"
+	"github.com/prakritichauhan07/tyk/config"
+	"github.com/prakritichauhan07/tyk/headers"
+	"github.com/prakritichauhan07/tyk/storage"
 	"github.com/sirupsen/logrus"
 )
 
