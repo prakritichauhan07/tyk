@@ -15,6 +15,7 @@ addons:
   apt:
     packages:
     - python3-pip
+    - moonjit
 
 matrix:
   include:
