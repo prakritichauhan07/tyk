@@ -8,7 +8,7 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/TykTechnologies/tyk/cli"
+	"github.com/prakritichauhan07/tyk/cli"
 
 	"github.com/TykTechnologies/gorpc"
 	"github.com/prakritichauhan07/tyk/apidef"
