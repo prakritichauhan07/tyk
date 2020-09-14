@@ -16,9 +16,9 @@ import (
 	"github.com/pires/go-proxyproto"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/TykTechnologies/tyk/apidef"
-	"github.com/TykTechnologies/tyk/config"
-	"github.com/TykTechnologies/tyk/storage"
+	"github.com/prakritichauhan07/tyk/apidef"
+	"github.com/prakritichauhan07/tyk/config"
+	"github.com/prakritichauhan07/tyk/storage"
 )
 
 const sampleUptimeTestAPI = `{
