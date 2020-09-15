@@ -5,6 +5,8 @@ notifications:
   on_success: never
   on_failure: always
 
+cache: false
+
 env:
   global:
     - TYK_LOGLEVEL=info
