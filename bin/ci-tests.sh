@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TEST_TIMEOUT=10m
+TEST_TIMEOUT=15m
 
 # print a command and execute it
 show() {
